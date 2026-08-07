@@ -1,10 +1,10 @@
 # India & the World
 
-A small, static learning website for children to explore India through playful facts and a quiz.
+A free, static Class 4 learning website covering India's geography, history, polity, culture, and relationship with the world through interactive diagrams, timelines, flow charts, flashcards, and quizzes.
 
 ## Anki cards
 
-`india-flashcards.tsv` is ready to import into Anki. In Anki, choose **Import File**, select the TSV file, and confirm that the field separator is set to **Tab**.
+`india-flashcards.tsv` is ready to import into Anki. In Anki, choose **Import File**, select the TSV file, confirm that the field separator is **Tab**, and map the third field to Tags.
 
 ## Publish with GitHub Pages
 

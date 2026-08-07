@@ -3,102 +3,136 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="A playful introduction to India for curious children." />
-    <title>India &amp; the World | Learn, play, wonder</title>
+    <meta name="description" content="A fun, interactive Class 4 journey through India's geography, history, government and culture." />
+    <title>India Explorer | Learn, play, remember</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@500;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@500;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="flashcards.css" />
     <link rel="stylesheet" href="visuals.css" />
     <link rel="stylesheet" href="regions.css" />
+    <link rel="stylesheet" href="learning.css" />
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="India and the World home"><span>✦</span> India &amp; the World</a>
-      <nav aria-label="Main navigation">
-        <a href="#explore">Explore</a>
-        <a href="#play">Play</a>
-        <a href="#cards">Cards</a>
-        <a href="#facts">Facts</a>
+      <a class="brand" href="#top"><span>✦</span> India Explorer</a>
+      <nav aria-label="Learning missions">
+        <a href="#geography">Geography</a><a href="#history">History</a><a href="#polity">Polity</a><a href="#quiz">Quiz</a>
       </nav>
+      <div class="header-score" aria-label="Stars earned"><span>⭐</span><b id="star-count">0</b></div>
     </header>
 
     <main id="top">
-      <section class="hero">
+      <section class="hero class-hero">
         <div class="hero-copy">
-          <p class="eyebrow">NAMASTE, LITTLE EXPLORER!</p>
-          <h1>So many stories<br /><em>in one country.</em></h1>
-          <p class="intro">Come on a colourful adventure across India—from snowy mountains to sunny beaches, busy cities to quiet forests.</p>
-          <a class="button" href="#explore">Start exploring <span>→</span></a>
-          <p class="tiny-note">Made for curious minds ages 6–12</p>
+          <p class="eyebrow">CLASS 4 · SOCIAL STUDIES</p>
+          <h1>Let’s explore<br /><em>incredible India!</em></h1>
+          <p class="intro">Follow rivers, travel through time, build a government and discover how one country can have so many wonderful ways of life.</p>
+          <a class="button" href="#mission-control">Begin mission <span>→</span></a>
+          <div class="hero-badges"><span>🗺️ 5 missions</span><span>🎮 Activities</span><span>⭐ Stars to earn</span></div>
         </div>
-        <div class="hero-art" aria-label="Decorative illustration of India">
-          <div class="sun"></div><div class="cloud c1"></div><div class="cloud c2"></div>
-          <div class="india-shape"><span class="dot"></span></div>
-          <div class="mountain m1"></div><div class="mountain m2"></div>
-          <div class="wave"></div>
-          <span class="art-label l1">Himalayas</span><span class="art-label l2">Indian Ocean</span>
+        <div class="hero-art learning-hero-art" aria-label="Illustration of India as a learning adventure">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="hero-india">🇮🇳</div>
+          <span class="floating-icon fi-one">🏔️</span><span class="floating-icon fi-two">🏛️</span><span class="floating-icon fi-three">🦚</span><span class="floating-icon fi-four">🌊</span>
         </div>
       </section>
 
-      <section id="explore" class="section explore">
-        <div class="section-heading"><p class="eyebrow">PICK A PATH</p><h2>What shall we discover?</h2><p>Every corner of India has something wonderful to share.</p></div>
-        <div class="cards">
-          <article class="card card-orange"><div class="icon">🗺️</div><h3>Places &amp; people</h3><p>Travel across mountains, deserts, rivers and cities.</p><button class="card-button" data-fact="India is home to 22 official languages—and hundreds more are spoken around the country!">Tell me more</button></article>
-          <article class="card card-pink"><div class="icon">🎉</div><h3>Festivals &amp; fun</h3><p>Meet celebrations full of lights, colours, music and sweets.</p><button class="card-button" data-fact="During Holi, people celebrate spring by playing with joyful clouds of coloured powder.">Tell me more</button></article>
-          <article class="card card-blue"><div class="icon">🐅</div><h3>Wild India</h3><p>Say hello to tigers, elephants, peacocks and more.</p><button class="card-button" data-fact="India has more wild tigers than any other country. A group of tigers is called a streak!">Tell me more</button></article>
-          <article class="card card-green"><div class="icon">🍛</div><h3>Food stories</h3><p>Discover delicious dishes from different regions.</p><button class="card-button" data-fact="Indian food is wonderfully diverse: a breakfast in Kerala can taste completely different from one in Punjab.">Tell me more</button></article>
+      <section id="mission-control" class="mission-control section">
+        <div class="progress-copy"><div><p class="eyebrow">YOUR LEARNING JOURNEY</p><h2>Five missions. One amazing country.</h2></div><p id="progress-message">Start a mission to earn your first star!</p></div>
+        <div class="progress-track" aria-label="Learning progress"><span id="progress-fill"></span></div>
+        <div class="mission-grid">
+          <a href="#geography" class="mission-card geography-card" data-mission="geography"><span>🗺️</span><b>1. Geography</b><small>Land, rivers &amp; regions</small><i>Start →</i></a>
+          <a href="#history" class="mission-card history-card" data-mission="history"><span>⏳</span><b>2. History</b><small>A journey through time</small><i>Start →</i></a>
+          <a href="#polity" class="mission-card polity-card" data-mission="polity"><span>🏛️</span><b>3. Polity</b><small>How India is governed</small><i>Start →</i></a>
+          <a href="#culture" class="mission-card culture-card" data-mission="culture"><span>🎭</span><b>4. Culture</b><small>Many ways, one India</small><i>Start →</i></a>
+          <a href="#world" class="mission-card world-card" data-mission="world"><span>🌍</span><b>5. India &amp; the world</b><small>Ideas that travel</small><i>Start →</i></a>
         </div>
       </section>
 
-      <section class="section regions" id="regions">
-        <div class="section-heading"><p class="eyebrow">TRAVEL AROUND INDIA</p><h2>Choose a region</h2><p>Tap a colourful part of the map to begin a mini journey.</p></div>
-        <div class="region-explorer">
-          <div class="india-map" aria-label="Stylised map of India with four regions">
-            <button class="region-pin north active" data-region="north"><span>🏔️</span> North</button>
-            <button class="region-pin west" data-region="west"><span>🐪</span> West</button>
-            <button class="region-pin east" data-region="east"><span>🦏</span> East</button>
-            <button class="region-pin south" data-region="south"><span>🌴</span> South</button>
+      <section id="geography" class="lesson geography-lesson">
+        <div class="lesson-intro"><span class="lesson-number">01</span><div><p class="eyebrow">GEOGRAPHY MISSION</p><h2>A land of many landscapes</h2><p>Geography is the study of places—what the land looks like, where water flows, and how people live there.</p></div></div>
+        <div class="diagram-card landform-card">
+          <div class="diagram-title"><div><span class="diagram-label">TAP THE LANDSCAPE</span><h3>Journey from north to south</h3></div><span class="compass">🧭</span></div>
+          <div class="landform-diagram" role="group" aria-label="Landforms of India">
+            <button class="landform active" data-landform="mountains"><span>🏔️</span><b>Himalayas</b><small>High &amp; cold</small></button><span class="diagram-arrow">→</span>
+            <button class="landform" data-landform="plains"><span>🌾</span><b>Northern Plains</b><small>Flat &amp; fertile</small></button><span class="diagram-arrow">→</span>
+            <button class="landform" data-landform="plateau"><span>⛰️</span><b>Deccan Plateau</b><small>High flat land</small></button><span class="diagram-arrow">→</span>
+            <button class="landform" data-landform="coast"><span>🏝️</span><b>Coasts &amp; Islands</b><small>Land meets sea</small></button>
           </div>
-          <article class="region-story"><span class="region-icon">🏔️</span><p class="eyebrow region-label">NORTH INDIA</p><h3 class="region-title">Mountains, forts &amp; snowy peaks</h3><p class="region-copy">The mighty Himalayas rise in the north. This is where the Ganga begins its long journey across India.</p><div class="region-details"><span class="region-food">🥟 Momos</span><span class="region-landmark">🏛️ Taj Mahal</span></div></article>
+          <div class="learn-panel"><span id="landform-emoji">🏔️</span><div><strong id="landform-title">The Himalayas</strong><p id="landform-copy">These young fold mountains form a natural wall in the north. Many rivers begin in their snow and glaciers.</p></div></div>
         </div>
+
+        <div class="two-column">
+          <div class="diagram-card river-card">
+            <span class="diagram-label">FOLLOW A RIVER</span><h3>How a river travels</h3>
+            <div class="river-flow"><div><span>🏔️</span><b>Source</b><small>Begins in hills</small></div><i>↓</i><div><span>🏞️</span><b>Tributaries</b><small>Small rivers join</small></div><i>↓</i><div><span>🌾</span><b>Plains</b><small>Waters farms</small></div><i>↓</i><div><span>🌊</span><b>Mouth</b><small>Meets the sea</small></div></div>
+          </div>
+          <div class="diagram-card direction-card">
+            <span class="diagram-label">DIRECTION DETECTIVE</span><h3>Which way should we go?</h3>
+            <div class="compass-game"><div class="compass-rose"><span>N</span><span>E</span><span>S</span><span>W</span><b>🧭</b></div><p id="direction-question">The Himalayas are in the ___ of India.</p><div class="mini-options"><button data-direction="wrong">South</button><button data-direction="right">North</button><button data-direction="wrong">West</button></div><p class="mini-feedback" aria-live="polite"></p></div>
+          </div>
+        </div>
+        <button class="complete-button" data-complete="geography">Complete geography mission ⭐</button>
       </section>
 
-      <section id="play" class="section quiz-section">
-        <div class="quiz-illustration"><span>❔</span><span>⭐</span><span>🦚</span><span>🌺</span></div>
-        <div class="quiz-content"><p class="eyebrow">MINI CHALLENGE</p><h2>Ready for a quick quiz?</h2><div class="question-with-image"><span class="quiz-animal" aria-hidden="true">🐯</span><p class="question">Which animal is India’s national animal?</p></div><div class="answers" role="group" aria-label="Quiz answers"><button data-answer="no">🐘 Elephant</button><button data-answer="yes">🐯 Tiger</button><button data-answer="no">🦚 Peacock</button></div><p class="answer-feedback" aria-live="polite"></p></div>
+      <section id="history" class="lesson history-lesson">
+        <div class="lesson-intro"><span class="lesson-number">02</span><div><p class="eyebrow">HISTORY MISSION</p><h2>India’s story through time</h2><p>History helps us understand how people, places, and ideas changed. Tap each stop on the timeline.</p></div></div>
+        <div class="diagram-card timeline-card">
+          <div class="timeline" role="tablist" aria-label="Indian history timeline">
+            <button class="time-stop active" data-era="indus"><span>🏺</span><b>2500 BCE</b><small>Indus cities</small></button>
+            <button class="time-stop" data-era="ashoka"><span>☸️</span><b>3rd century BCE</b><small>Emperor Ashoka</small></button>
+            <button class="time-stop" data-era="kingdoms"><span>🏰</span><b>Ancient–medieval</b><small>Many kingdoms</small></button>
+            <button class="time-stop" data-era="freedom"><span>🕊️</span><b>1857–1947</b><small>Freedom struggle</small></button>
+            <button class="time-stop" data-era="republic"><span>🇮🇳</span><b>1950</b><small>India a republic</small></button>
+          </div>
+          <article class="era-story"><span id="era-icon">🏺</span><div><p id="era-date">About 2500 BCE</p><h3 id="era-title">Well-planned Indus cities</h3><p id="era-copy">Cities such as Harappa had straight streets, brick houses, wells, and covered drains. That shows careful planning.</p><span class="remember" id="era-remember">💡 Remember: cities and drainage</span></div></article>
+        </div>
+        <div class="cause-effect diagram-card"><span class="diagram-label">CAUSE → ACTION → RESULT</span><h3>How India became free</h3><div class="flow-row"><div><span>🤝</span><b>People unite</b><small>They want to govern themselves</small></div><i>→</i><div><span>📣</span><b>Peaceful movements</b><small>Leaders and citizens take action</small></div><i>→</i><div><span>🕊️</span><b>Independence</b><small>India becomes free in 1947</small></div></div></div>
+        <button class="complete-button" data-complete="history">Complete history mission ⭐</button>
+      </section>
+
+      <section id="polity" class="lesson polity-lesson">
+        <div class="lesson-intro"><span class="lesson-number">03</span><div><p class="eyebrow">POLITY MISSION</p><h2>How our democracy works</h2><p>Polity means how a country is governed. In a democracy, people choose representatives to work for everyone.</p></div></div>
+        <div class="democracy-flow diagram-card"><span class="diagram-label">THE DEMOCRACY LOOP</span><h3>Your voice travels!</h3><div class="flow-row democracy-row"><div><span>👨‍👩‍👧‍👦</span><b>Citizens</b><small>People of India</small></div><i>→</i><div><span>🗳️</span><b>Vote</b><small>Choose leaders</small></div><i>→</i><div><span>🏛️</span><b>Representatives</b><small>Make decisions</small></div><i>→</i><div><span>🏫</span><b>Public services</b><small>Serve the people</small></div><i class="loop-back">↩</i></div></div>
+        <div class="diagram-card government-card"><span class="diagram-label">WHO DOES WHAT?</span><h3>Three levels of government</h3><div class="government-levels">
+          <button class="gov-level active" data-government="local"><span>🏘️</span><b>Local</b><small>Your town or village</small></button>
+          <button class="gov-level" data-government="state"><span>🏙️</span><b>State</b><small>Your whole state</small></button>
+          <button class="gov-level" data-government="union"><span>🇮🇳</span><b>Union</b><small>The whole country</small></button>
+        </div><div class="government-detail"><span id="government-icon">🧹</span><p><strong id="government-title">Local government</strong><br><span id="government-copy">Looks after nearby needs such as streets, parks, drains, and waste collection.</span></p></div></div>
+        <div class="constitution-note"><span>📘</span><div><b>The Constitution is India’s rulebook</b><p>It explains how the country is governed and protects the rights of its citizens.</p></div></div>
+        <button class="complete-button" data-complete="polity">Complete polity mission ⭐</button>
+      </section>
+
+      <section id="culture" class="lesson culture-lesson">
+        <div class="lesson-intro"><span class="lesson-number">04</span><div><p class="eyebrow">CULTURE MISSION</p><h2>Many cultures, one India</h2><p>Culture includes language, food, music, clothing, art, festivals and the way people live.</p></div></div>
+        <div class="culture-wheel diagram-card"><div class="wheel-center"><span>🇮🇳</span><b>Unity in<br>diversity</b></div><div class="culture-spokes"><span>🗣️<b>Languages</b></span><span>🍛<b>Food</b></span><span>🎶<b>Music</b></span><span>🎉<b>Festivals</b></span><span>👗<b>Clothing</b></span><span>🎨<b>Art</b></span></div></div>
+        <div class="diversity-message"><span>🤝</span><p><b>Different does not mean divided.</b><br>We may speak, eat, dress, and celebrate differently—and still share one country.</p></div>
+        <button class="complete-button" data-complete="culture">Complete culture mission ⭐</button>
+      </section>
+
+      <section id="world" class="lesson world-lesson">
+        <div class="lesson-intro"><span class="lesson-number">05</span><div><p class="eyebrow">INDIA &amp; THE WORLD</p><h2>Ideas travel across borders</h2><p>Countries share goods, knowledge, stories and inventions. India learns from the world, and the world learns from India.</p></div></div>
+        <div class="world-flow diagram-card"><div class="country india-node"><span>🇮🇳</span><b>India</b></div><div class="exchange-lines"><div><span>Yoga</span><i>→</i></div><div><i>←</i><span>Technology</span></div><div><span>Spices</span><i>→</i></div><div><i>←</i><span>Ideas</span></div></div><div class="country globe-node"><span>🌍</span><b>The world</b></div></div>
+        <div class="world-message">When countries exchange ideas respectfully, everyone can learn and grow. 🌱</div>
+        <button class="complete-button" data-complete="world">Complete world mission ⭐</button>
       </section>
 
       <section id="cards" class="section flashcards">
-        <div class="flashcard-wrap">
-        <div class="section-heading"><p class="eyebrow">STUDY &amp; PLAY</p><h2>India flashcards</h2><p>Read the question, think of the answer, then flip the card.</p></div>
-        <div class="deck-picker" aria-label="Choose flashcard deck"><button class="deck-button active" data-deck="india">All about India</button><button class="deck-button" data-deck="animals">Wild India</button><button class="deck-button" data-deck="celebrations">Celebrations</button></div>
-        <div class="flashcard-wrap">
-        <div class="flashcard-wrap">
-          <button class="round-button previous-card" aria-label="Previous card">←</button>
-          <button class="flashcard" aria-label="Flip flashcard"><span class="card-count"></span><span class="card-side card-front"><small>QUESTION</small><span class="card-emoji front-emoji" aria-hidden="true"></span><strong></strong><i>Tap to reveal the answer</i></span><span class="card-side card-back"><small>ANSWER</small><span class="card-emoji back-emoji" aria-hidden="true"></span><strong></strong><i>Tap for the question</i></span></button>
-          <button class="round-button next-card" aria-label="Next card">→</button>
-        </div>
+        <div class="section-heading"><p class="eyebrow">QUICK REVISION</p><h2>Flip-and-learn cards</h2><p>Choose a subject. Think first, then tap the card to check.</p></div>
+        <div class="deck-picker" aria-label="Choose flashcard deck"><button class="deck-button active" data-deck="geography">🗺️ Geography</button><button class="deck-button" data-deck="history">⏳ History</button><button class="deck-button" data-deck="polity">🏛️ Polity</button><button class="deck-button" data-deck="culture">🎭 Culture</button></div>
+        <div class="flashcard-wrap"><button class="round-button previous-card" aria-label="Previous card">←</button><button class="flashcard" aria-label="Flip flashcard"><span class="card-count"></span><span class="card-side card-front"><small>QUESTION</small><span class="card-emoji front-emoji" aria-hidden="true"></span><strong></strong><i>Tap to reveal the answer</i></span><span class="card-side card-back"><small>ANSWER</small><span class="card-emoji back-emoji" aria-hidden="true"></span><strong></strong><i>Tap for the question</i></span></button><button class="round-button next-card" aria-label="Next card">→</button></div>
         <div class="study-controls"><button class="know-button">I knew that! ✦</button><a class="anki-download" href="india-flashcards.tsv" download>Download for Anki ↓</a></div>
-        <p class="anki-note">To import: open Anki → Import File → choose the download → set the separator to “Tab”.</p>
       </section>
 
-      <section id="facts" class="section facts">
-        <div class="section-heading"><p class="eyebrow">LITTLE BIG FACTS</p><h2>India in a nutshell</h2></div>
-        <div class="fact-grid">
-          <div class="fact"><span>🧭</span><strong>7th</strong><p>largest country in the world</p></div>
-          <div class="fact"><span>🦚</span><strong>Peacock</strong><p>is the national bird</p></div>
-          <div class="fact"><span>🌊</span><strong>7,500 km</strong><p>of coastline to explore</p></div>
-          <div class="fact"><span>🪷</span><strong>Lotus</strong><p>is the national flower</p></div>
-        </div>
+      <section id="quiz" class="section final-quiz">
+        <div class="quiz-shell"><div class="quiz-top"><div><p class="eyebrow">THE GRAND INDIA QUIZ</p><h2>Ready to test your explorer brain?</h2></div><div class="quiz-score"><span id="quiz-score">0</span><small>stars</small></div></div><div class="quiz-progress"><span id="quiz-progress-fill"></span></div><div id="quiz-area"><span class="quiz-topic">GEOGRAPHY</span><div class="quiz-visual" id="quiz-visual">🏔️</div><h3 id="quiz-question"></h3><div class="quiz-answers" id="quiz-answers"></div><p id="quiz-feedback" aria-live="polite"></p></div><button id="next-question" hidden>Next question →</button></div>
       </section>
-
-      <section class="promise"><div><p class="eyebrow">ONE ADVENTURE AT A TIME</p><h2>Keep asking brilliant questions.</h2></div><p>India is full of answers—and even more wonderful questions.</p></section>
     </main>
 
-    <footer><span>Made with curiosity and a little sparkle ✦</span><span>India &amp; the World</span></footer>
-    <div class="fact-popover" role="status" aria-live="polite"><button aria-label="Close">×</button><span></span></div>
+    <footer><span>Made for curious Class 4 explorers ✦</span><span>Learn • Play • Remember</span></footer>
+    <div class="star-toast" role="status" aria-live="polite">⭐ Mission complete! You earned a star.</div>
     <script src="script.js"></script>
   </body>
 </html>
