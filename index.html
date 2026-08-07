@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A playful introduction to India for curious children." />
+    <title>India &amp; the World | Learn, play, wonder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="flashcards.css" />
+    <link rel="stylesheet" href="visuals.css" />
+    <link rel="stylesheet" href="regions.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="India and the World home"><span>✦</span> India &amp; the World</a>
+      <nav aria-label="Main navigation">
+        <a href="#explore">Explore</a>
+        <a href="#play">Play</a>
+        <a href="#cards">Cards</a>
+        <a href="#facts">Facts</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">NAMASTE, LITTLE EXPLORER!</p>
+          <h1>So many stories<br /><em>in one country.</em></h1>
+          <p class="intro">Come on a colourful adventure across India—from snowy mountains to sunny beaches, busy cities to quiet forests.</p>
+          <a class="button" href="#explore">Start exploring <span>→</span></a>
+          <p class="tiny-note">Made for curious minds ages 6–12</p>
+        </div>
+        <div class="hero-art" aria-label="Decorative illustration of India">
+          <div class="sun"></div><div class="cloud c1"></div><div class="cloud c2"></div>
+          <div class="india-shape"><span class="dot"></span></div>
+          <div class="mountain m1"></div><div class="mountain m2"></div>
+          <div class="wave"></div>
+          <span class="art-label l1">Himalayas</span><span class="art-label l2">Indian Ocean</span>
+        </div>
+      </section>
+
+      <section id="explore" class="section explore">
+        <div class="section-heading"><p class="eyebrow">PICK A PATH</p><h2>What shall we discover?</h2><p>Every corner of India has something wonderful to share.</p></div>
+        <div class="cards">
+          <article class="card card-orange"><div class="icon">🗺️</div><h3>Places &amp; people</h3><p>Travel across mountains, deserts, rivers and cities.</p><button class="card-button" data-fact="India is home to 22 official languages—and hundreds more are spoken around the country!">Tell me more</button></article>
+          <article class="card card-pink"><div class="icon">🎉</div><h3>Festivals &amp; fun</h3><p>Meet celebrations full of lights, colours, music and sweets.</p><button class="card-button" data-fact="During Holi, people celebrate spring by playing with joyful clouds of coloured powder.">Tell me more</button></article>
+          <article class="card card-blue"><div class="icon">🐅</div><h3>Wild India</h3><p>Say hello to tigers, elephants, peacocks and more.</p><button class="card-button" data-fact="India has more wild tigers than any other country. A group of tigers is called a streak!">Tell me more</button></article>
+          <article class="card card-green"><div class="icon">🍛</div><h3>Food stories</h3><p>Discover delicious dishes from different regions.</p><button class="card-button" data-fact="Indian food is wonderfully diverse: a breakfast in Kerala can taste completely different from one in Punjab.">Tell me more</button></article>
+        </div>
+      </section>
+
+      <section class="section regions" id="regions">
+        <div class="section-heading"><p class="eyebrow">TRAVEL AROUND INDIA</p><h2>Choose a region</h2><p>Tap a colourful part of the map to begin a mini journey.</p></div>
+        <div class="region-explorer">
+          <div class="india-map" aria-label="Stylised map of India with four regions">
+            <button class="region-pin north active" data-region="north"><span>🏔️</span> North</button>
+            <button class="region-pin west" data-region="west"><span>🐪</span> West</button>
+            <button class="region-pin east" data-region="east"><span>🦏</span> East</button>
+            <button class="region-pin south" data-region="south"><span>🌴</span> South</button>
+          </div>
+          <article class="region-story"><span class="region-icon">🏔️</span><p class="eyebrow region-label">NORTH INDIA</p><h3 class="region-title">Mountains, forts &amp; snowy peaks</h3><p class="region-copy">The mighty Himalayas rise in the north. This is where the Ganga begins its long journey across India.</p><div class="region-details"><span class="region-food">🥟 Momos</span><span class="region-landmark">🏛️ Taj Mahal</span></div></article>
+        </div>
+      </section>
+
+      <section id="play" class="section quiz-section">
+        <div class="quiz-illustration"><span>❔</span><span>⭐</span><span>🦚</span><span>🌺</span></div>
+        <div class="quiz-content"><p class="eyebrow">MINI CHALLENGE</p><h2>Ready for a quick quiz?</h2><div class="question-with-image"><span class="quiz-animal" aria-hidden="true">🐯</span><p class="question">Which animal is India’s national animal?</p></div><div class="answers" role="group" aria-label="Quiz answers"><button data-answer="no">🐘 Elephant</button><button data-answer="yes">🐯 Tiger</button><button data-answer="no">🦚 Peacock</button></div><p class="answer-feedback" aria-live="polite"></p></div>
+      </section>
+
+      <section id="cards" class="section flashcards">
+        <div class="flashcard-wrap">
+        <div class="section-heading"><p class="eyebrow">STUDY &amp; PLAY</p><h2>India flashcards</h2><p>Read the question, think of the answer, then flip the card.</p></div>
+        <div class="deck-picker" aria-label="Choose flashcard deck"><button class="deck-button active" data-deck="india">All about India</button><button class="deck-button" data-deck="animals">Wild India</button><button class="deck-button" data-deck="celebrations">Celebrations</button></div>
+        <div class="flashcard-wrap">
+        <div class="flashcard-wrap">
+          <button class="round-button previous-card" aria-label="Previous card">←</button>
+          <button class="flashcard" aria-label="Flip flashcard"><span class="card-count"></span><span class="card-side card-front"><small>QUESTION</small><span class="card-emoji front-emoji" aria-hidden="true"></span><strong></strong><i>Tap to reveal the answer</i></span><span class="card-side card-back"><small>ANSWER</small><span class="card-emoji back-emoji" aria-hidden="true"></span><strong></strong><i>Tap for the question</i></span></button>
+          <button class="round-button next-card" aria-label="Next card">→</button>
+        </div>
+        <div class="study-controls"><button class="know-button">I knew that! ✦</button><a class="anki-download" href="india-flashcards.tsv" download>Download for Anki ↓</a></div>
+        <p class="anki-note">To import: open Anki → Import File → choose the download → set the separator to “Tab”.</p>
+      </section>
+
+      <section id="facts" class="section facts">
+        <div class="section-heading"><p class="eyebrow">LITTLE BIG FACTS</p><h2>India in a nutshell</h2></div>
+        <div class="fact-grid">
+          <div class="fact"><span>🧭</span><strong>7th</strong><p>largest country in the world</p></div>
+          <div class="fact"><span>🦚</span><strong>Peacock</strong><p>is the national bird</p></div>
+          <div class="fact"><span>🌊</span><strong>7,500 km</strong><p>of coastline to explore</p></div>
+          <div class="fact"><span>🪷</span><strong>Lotus</strong><p>is the national flower</p></div>
+        </div>
+      </section>
+
+      <section class="promise"><div><p class="eyebrow">ONE ADVENTURE AT A TIME</p><h2>Keep asking brilliant questions.</h2></div><p>India is full of answers—and even more wonderful questions.</p></section>
+    </main>
+
+    <footer><span>Made with curiosity and a little sparkle ✦</span><span>India &amp; the World</span></footer>
+    <div class="fact-popover" role="status" aria-live="polite"><button aria-label="Close">×</button><span></span></div>
+    <script src="script.js"></script>
+  </body>
+</html>
